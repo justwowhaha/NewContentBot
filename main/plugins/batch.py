@@ -22,7 +22,7 @@ from pyrogram.errors import FloodWait
 from ethon.pyfunc import video_metadata
 from ethon.telefunc import force_sub
 
-ft = f"To use this bot you've to join @{fs}."
+ft = f"To use this bot you've to join @{fs} and @PiroTricks."
 
 batch = []
 
@@ -66,7 +66,7 @@ async def _batch(event):
                 return conv.cancel()
             try:
                 value = int(_range.text)
-                if value > 100:
+                if value > 100000:
                     await conv.send_message("You can only get upto 100 files in a single batch.")
                     return conv.cancel()
             except ValueError:
